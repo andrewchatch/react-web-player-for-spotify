@@ -1,0 +1,22 @@
+.icons {
+    margin-left: 2vw;
+    margin-right: 2vw;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 50px;
+    width: fit-content;
+}
+
+.icons:hover {
+    background-color: rgb(150,150,150);
+}
+
+.play-button {
+    visibility: hidden;
+    color: white;
+}
+
+.item-img {
+    height: 150px;
+    width: 150px;
+}

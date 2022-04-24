@@ -1,0 +1,27 @@
+#home {
+    margin-left: 18vw;
+    margin-bottom: 12vh;
+    overflow-x: scroll;
+    overflow-y: scroll;
+    color: white;
+    background-color: rgb(70,70,70);
+}
+
+#top-section {
+    margin-top: 50px;
+}
+
+.links {
+    margin-left: 1vw;
+}
+
+.title {
+    margin-left: 3vw;
+    font-size: 24px;
+}
+
+.top-section {
+    display: flex;
+    border-radius: 10px;
+    margin-right: 10vw;
+}

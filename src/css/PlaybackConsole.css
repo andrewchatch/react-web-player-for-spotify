@@ -1,0 +1,107 @@
+#playback {
+    width: 100%;
+    height: 12vh;
+    background-color: rgb(60,60,60);
+    border-top: 2px solid rgb(40,40,40);
+    bottom: 0;
+    position: fixed;
+    color: white;
+}
+
+#current-track-img {
+    border: none;
+    height: 50px;
+    width: 50px;
+    float: left;
+    margin-top: 2vh;
+    margin-left: 2vw;
+}
+
+#one {
+    visibility: hidden;
+    position: fixed;
+    font-size: 8px;    
+}
+
+#current-track-section {
+    float: left;
+    width: 30vw;
+    height: 12vh;
+    font-size: 12px;
+    display: flex;
+    position: relative;
+}
+
+#current-track-info {
+    margin-left: 10px;
+    float: left;
+    width: 25ch;
+    white-space: nowrap;
+    overflow: auto;
+    text-overflow: ellipsis;
+}
+
+#track-name {
+    margin-top: 22px;
+    font-size: 14px;
+}
+
+#artist-name {
+    margin-top: -18px;
+    color: rgb(200,200,200);
+}
+
+#pause-icon {
+    display: none;
+}
+
+#playback-section {
+    position: relative;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-playback, .btn-playback:hover, .btn-playback:active, .btn-playback:focus, .btn-playback:disabled {
+    background-color: rgb(60, 60, 60);
+    border: none;
+    margin: 1vw;
+}
+
+
+span {
+    -moz-animation: marquee 10s linear infinite;
+    -webkit-animation: marquee 10s linear infinite;
+    animation: marquee 10s linear infinite;
+}
+
+@-moz-keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+}
+      
+@-webkit-keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes marquee {
+    0% {
+        -moz-transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%)
+    }
+    100% {
+        -moz-transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+    }
+}

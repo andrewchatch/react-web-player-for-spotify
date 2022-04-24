@@ -1,0 +1,19 @@
+#search-page {
+    margin-left: 20vw;
+    margin-bottom: 15vh;
+}
+
+#search-bar {
+    margin-top: 1vh;
+}
+
+#search, #search:focus {
+    border: none;
+    outline: none;
+    margin-left: 5px;
+    width: 50vw;
+}
+
+.response-section {
+    display: flex;
+}
