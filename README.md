@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+# React Web Player for Spotify
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This app is a clone of the Spotify Web Player built using a React frontend and an Node.js/Express backend for authentication. 
 
-## Available Scripts
+## Using this app:
 
-In the project directory, you can run:
+First, you can clone the project directory from 'https://github.com/andrewchatch/react-web-player-for-spotify.git' or by using the GitHub CLI:
 
-### `npm start`
+`gh repo clone andrewchatch/react-web-player-for-spotify`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Once the directory is cloned locally, you can run the app using npm:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+`npm start`
 
-### `npm test`
+Runs the front and back end using [concurrently](https://www.npmjs.com/package/concurrently)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Open [http://localhost:3000](http://localhost:3000) to view the application. (The backend runs on port 8000 by default).
 
-### `npm run build`
+## Project Intent
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+I built this project to further develop my skills in full-stack development. I am passionate about music and use the Spotify app on a daily basis, so I thought it would be fun to work with the Spotify API and try to re-create the web player interface.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Dependencies Used
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+This app is built using the following dependencies:
 
-### `npm run eject`
+### Back-end
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- (express)[https://www.npmjs.com/package/express]
+- (express-session)[https://www.npmjs.com/package/express-session]
+- (mongoose)[https://www.npmjs.com/package/mongoose]
+- (cors)[https://www.npmjs.com/package/cors]
+- (dotenv)[https://www.npmjs.com/package/dotenv]
+- (axios)[https://www.npmjs.com/package/axios]
+- (passport)[https://www.npmjs.com/package/passport]
+- (passport-oauth2-refresh)[https://www.npmjs.com/package/passport-oauth2-refresh]
+- (passport-spotify)[https://www.npmjs.com/package/passport-spotify]
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Front-end
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- (React)[https://reactjs.org/]
+- (Font Awesome)[https://fontawesome.com/icons]
+- (Axios)[https://www.npmjs.com/package/axios]
+- (Bootstrap)[https://getbootstrap.com/]
+- (Concurrently)[https://www.npmjs.com/package/concurrently]
+- (JQuery)[https://jquery.com/]
+- (react-router-dom)[https://www.npmjs.com/package/react-router-dom]
