@@ -5,7 +5,7 @@ import AuthApp from './auth/AuthApp';
 
 const url = 'http://localhost:8000';
 
-const App = (props) => {
+const App = () => {
 
     return (
       <div className="App">

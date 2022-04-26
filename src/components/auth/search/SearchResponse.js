@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Icon from "../icons/Icon";
 
 const SearchResponse = (props) => {

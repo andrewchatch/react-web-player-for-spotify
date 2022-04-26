@@ -12,7 +12,6 @@ const Home = (props) => {
     const apiUrl = props.apiUrl;
     const deviceID = props.deviceID;
     const [profile, setProfile] = useState('');
-    const [playlistArray, setPlaylistArray] = useState([]);
     const url = props.url;
 
 
@@ -46,9 +45,9 @@ const Home = (props) => {
             <UserSection profile={profile} url={url} />
 
             <div id="top-section">
-                <Playlists apiUrl={apiUrl} token={token} deviceID={deviceID} />
-                <Artists apiUrl={apiUrl} token={token} deviceID={deviceID} />
-                <Albums apiUrl={apiUrl} token={token} deviceID={deviceID} />
+                <Playlists apiUrl={apiUrl} token={token} deviceID={deviceID} passPlayingFromView={props.passPlayingFromView} />
+                <Artists apiUrl={apiUrl} token={token} deviceID={deviceID} passPlayingFromView={props.passPlayingFromView} />
+                <Albums apiUrl={apiUrl} token={token} deviceID={deviceID} passPlayingFromView={props.passPlayingFromView} />
             </div>
             
         </div>

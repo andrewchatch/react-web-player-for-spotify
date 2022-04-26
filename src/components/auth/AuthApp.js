@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Home from './Home';
-import { Routes, Route, Link, Navigate } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Navbar from './Navbar';
 import PlaybackConsole from './playback/PlaybackConsole';
 import ViewItem from './icons/ViewItem';
@@ -10,7 +10,7 @@ import Search from './search/Search';
 const url = 'http://localhost:8000';
 const apiUrl = 'https://api.spotify.com/v1';
 
-const AuthApp = (props) => {
+const AuthApp = () => {
   document.addEventListener('readystatechange', () => {
     document.getElementsByTagName('body')[0].style.display = 'block';
   });
@@ -34,6 +34,7 @@ const AuthApp = (props) => {
                 setRefreshToken(res.data.refresh_token);
             })
             .catch((err) => {
+                console.log(err);
                 setIsAuthenticated(false);
                 window.location.href = '/';
             });
@@ -54,7 +55,7 @@ const AuthApp = (props) => {
                 <PlaybackConsole url={url} token={token} refreshToken={refreshToken} apiUrl={apiUrl} playingFromView={playingFromView} passDeviceID={setDeviceID} />
                 
                 <Routes>
-                    <Route path='/' exact element={<Home url={url} token={token} refreshToken={refreshToken} apiUrl={apiUrl} deviceID={deviceID} />} />
+                    <Route path='/' exact element={<Home url={url} token={token} refreshToken={refreshToken} apiUrl={apiUrl} deviceID={deviceID} passPlayingFromView={setPlayingFromView} />} />
                     <Route path='/list' exact element={<ViewItem passPlayingFromView={setPlayingFromView} />} />
                     <Route path='/search' exact element={<Search apiUrl={apiUrl} token={token} deviceID={deviceID} />} />
                 </Routes>

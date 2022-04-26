@@ -34,8 +34,8 @@ const Playlists = (props) => {
             <h2 className='text-left title'>My Top Playlists</h2>
             <div className="top-section">
             {
-                playlistArray && playlistArray.map((playlist, index) => {
-                    return <Icon key={playlist.id} item={playlist} token={token} type='playlists' deviceID={props.deviceID} apiUrl={apiUrl} />
+                playlistArray && playlistArray.map((playlist) => {
+                    return <Icon key={playlist.id} passPlayingFromView={props.passPlayingFromView} item={playlist} token={token} type='playlists' deviceID={props.deviceID} apiUrl={apiUrl} />
                 })
             }
             </div>

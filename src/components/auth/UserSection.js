@@ -15,7 +15,7 @@ const UserSection = (props) => {
         isDisplayed = false;
     }, []);
     
-    const toggleMenu = (event) => {
+    const toggleMenu = () => {
         const downIcon = document.getElementById('down-icon');
         const upIcon = document.getElementById('up-icon');
         const dropdownMenu = document.getElementById('dropdown-menu');
@@ -47,7 +47,7 @@ const UserSection = (props) => {
             </div>
 
             <div id="dropdown-menu" className="text-left">
-                <a className='dropdown-links' href={`${profile.external_urls.spotify}`} target="_blank">Profile</a>
+                <a className='dropdown-links' href={`${profile.external_urls.spotify}`} target="_blank" rel="noreferrer">Profile</a>
                 <a className='dropdown-links' href={`${url}/logout`}>Log Out</a>
             </div>
         </div>

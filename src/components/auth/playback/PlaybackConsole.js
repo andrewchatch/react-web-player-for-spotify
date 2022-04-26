@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlay, faPause, faStepForward, faStepBackward, faShuffle, faRepeat, faRepeat1 } from '@fortawesome/free-solid-svg-icons';
+import { faPlay, faPause, faStepForward, faStepBackward, faShuffle, faRepeat } from '@fortawesome/free-solid-svg-icons';
 import '../../../css/PlaybackConsole.css';
 import { player } from './ScriptCode';
 import 'jquery.marquee';
@@ -46,7 +46,7 @@ const PlaybackConsole = (props) => {
                     await axios.get(props.url + '/refresh_token', {
                         refresh_token: props.refreshToken
                     })
-                        .then((res) => {
+                        .then(() => {
                             // console.log(res);
                         })
                         .catch((err) => {
@@ -93,20 +93,20 @@ const PlaybackConsole = (props) => {
             });
     }
 
-    const getDevices = async () => {
-        await axios.get(apiUrl + '/me/player/devices', {
-            headers: {
-                'Authorization': 'Bearer ' + token,
-                'Content-Type': 'application/json'
-            }
-        })
-            .then((res) => {
-                console.log(res.data.devices);
-            })
-            .catch((err) => {
-                console.log(err.response);
-            });
-    }
+    // const getDevices = async () => {
+    //     await axios.get(apiUrl + '/me/player/devices', {
+    //         headers: {
+    //             'Authorization': 'Bearer ' + token,
+    //             'Content-Type': 'application/json'
+    //         }
+    //     })
+    //         .then((res) => {
+    //             console.log(res.data.devices);
+    //         })
+    //         .catch((err) => {
+    //             console.log(err.response);
+    //         });
+    // }
 
     const transferPlayback = async () => {
         await axios.put(apiUrl + '/me/player', { device_ids: [player.device_id], play: true}, {
@@ -115,7 +115,7 @@ const PlaybackConsole = (props) => {
                 'Content-Type': 'application/json'
             }
         })
-            .then((res) => {
+            .then(() => {
                 // console.log(res);
             })
             .catch((err) => {
@@ -154,7 +154,7 @@ const PlaybackConsole = (props) => {
                 device_id: player.device_id
             }
         })
-            .then((res) => {
+            .then(() => {
                 // console.log(res);
             })
             .catch((err) => {
@@ -206,7 +206,7 @@ const PlaybackConsole = (props) => {
                 device_id: player.device_id
             }
         })
-            .then((res) => {
+            .then(() => {
                 console.log(newRepeatState);
             })
             .catch((err) => {
@@ -226,7 +226,7 @@ const PlaybackConsole = (props) => {
                     'Content-Type': 'application/json'
                 }
             })
-                .then((res) => {
+                .then(() => {
                     // console.log(res);
                 })
                 .catch((err) => {
@@ -246,7 +246,7 @@ const PlaybackConsole = (props) => {
                 'Content-Type': 'application/json'
             }
         })
-            .then((res) => {
+            .then(() => {
                 // console.log(res.data);
             })
             .catch((err) => {
@@ -270,7 +270,7 @@ const PlaybackConsole = (props) => {
                     'Content-Type': 'application/json'
                 }
             })
-                .then((res) => {
+                .then(() => {
                     // console.log(res.data);
                 })
                 .catch((err) => {
@@ -284,7 +284,7 @@ const PlaybackConsole = (props) => {
                     'Content-Type': 'application/json'
                 }
             })
-                .then((res) => {
+                .then(() => {
                     // console.log(res.data);
                 })
                 .catch((err) => {

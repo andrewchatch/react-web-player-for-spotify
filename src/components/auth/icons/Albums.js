@@ -35,7 +35,7 @@ const Albums = (props) => {
             <div className="top-section">
             {
                 albumArray && albumArray.map((album, index) => {
-                    return <Icon key={index} item={album.album} token={token} type='albums' deviceID={props.deviceID} apiUrl={apiUrl} />
+                    return <Icon key={index} passPlayingFromView={props.passPlayingFromView} item={album.album} token={token} type='albums' deviceID={props.deviceID} apiUrl={apiUrl} />
                 })
             }
             </div>

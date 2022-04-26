@@ -11,7 +11,7 @@ const ViewItem = (props) => {
 
     const location = useLocation();
 
-    const { deviceID, token, type, item, apiUrl } = location.state || '';
+    const { token, type, item, apiUrl } = location.state || '';
 
     const typeVal = type.slice(0, -1)
 
@@ -119,7 +119,7 @@ const ViewItem = (props) => {
                 'Content-Type': 'application/json'
             }
         })
-            .then((res) => {
+            .then(() => {
                 // console.log(res.data);
 
             })
@@ -135,7 +135,7 @@ const ViewItem = (props) => {
                 'Content-Type': 'application/json'
             }
         })
-            .then((res) => {
+            .then(() => {
                 // console.log(res);
             })
             .catch((err) => {
@@ -163,7 +163,7 @@ const ViewItem = (props) => {
                 device_id: player.device_id
             }
         })
-            .then((res) => {
+            .then(() => {
                 props.passPlayingFromView(true);
             })
             .catch((err) => {
@@ -176,7 +176,7 @@ const ViewItem = (props) => {
         <div id='item-view-page' className="text-center">
 
             <div id='item-info'>
-                <a href={item.external_urls.spotify} target='_blank'>
+                <a href={item.external_urls.spotify} target='_blank' rel="noreferrer">
                     {item.images[0] ? <img id='cover-pic' alt="Item cover image" src={item.images[0].url} /> : <img id='cover-pic' src={noImage} alt='Item cover image' />}
                 </a>
 
@@ -236,7 +236,7 @@ const ViewItem = (props) => {
                 
             </table>
            
-            <p id='spotify-ref'>To view more details about this {typeVal}, <a id='external-link' href={item.external_urls.spotify} target='_blank'>click here</a>.</p>
+            <p id='spotify-ref'>To view more details about this {typeVal}, <a id='external-link' href={item.external_urls.spotify} target='_blank' rel="noreferrer">click here</a>.</p>
 
             
         </div>

@@ -33,8 +33,8 @@ const Artists = (props) => {
             <h2 className='text-left title'>My Top Artists</h2>
             <div className="top-section">
             {
-                artistArray && artistArray.map((artist, index) => {
-                    return <Icon key={artist.id} item={artist} token={token} type='artists' deviceID={props.deviceID} apiUrl={apiUrl} />
+                artistArray && artistArray.map((artist) => {
+                    return <Icon key={artist.id} passPlayingFromView={props.passPlayingFromView} item={artist} token={token} type='artists' deviceID={props.deviceID} apiUrl={apiUrl} />
                 })
             }
             </div>
