@@ -8,7 +8,13 @@ First, you can clone the project directory from 'https://github.com/andrewchatch
 
 `gh repo clone andrewchatch/react-web-player-for-spotify`
 
-Once the directory is cloned locally, you can run the app using npm:
+Once the directory is cloned locally, please install the required dependencies using `npm install`. 
+
+Additionally, you will need to create a new project on the [Spotify Developer Dashboard](https://developer.spotify.com/dashboard/login) and store the client id and client secret in a .env file in the backend folder. Store the environment variables as SPOTIFY_CLIENT_ID and SPOTIFY_CLIENT_SECRET, respectively. You can learn more about this process [here](https://developer.spotify.com/documentation/web-playback-sdk/)
+
+You will also need to create a MongoDB database by following the steps [here](https://www.mongodb.com/basics/create-database) and store the connection URI as MONGODB_CONNECT_URI in the .env file.
+
+Once finished with the above steps, you can run the app using npm:
 
 `npm start`
 
